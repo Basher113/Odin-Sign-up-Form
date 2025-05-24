@@ -1,3 +1,11 @@
+:root {
+    --button-color: #596D48;
+    --hover-button-color: #596d48dc;
+    --input-border-color: #E5E7EB;
+    --input-focus-color: rgb(15, 59, 255);
+    --invalid-form-color: red;
+}
+
 @font-face {
     font-family: "Norse-Bold";
     src: url(Norse-Bold.otf);
@@ -9,22 +17,21 @@
     box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ececec;
+}
+
 .container {
     display: flex;
     height: 100vh;
 }
 
 .left-section {
-   
-    
     background: url(images/halie-west-25xggax4bSA-unsplash.jpg);
-    flex: 1;
+    flex: 2;
     background-size: cover;
     position: relative;
-}
-
-.right-section {
-    flex: 3;
 }
 
 .logo {
@@ -45,3 +52,127 @@
 .logo img {
     width: 100px;
 }
+
+.right-section {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+.information-section {
+    font-size: 1.7rem;
+    font-weight: 700;
+    max-inline-size: 60ch;
+    margin-bottom: 1em;
+    padding: 100px 0 0 40px;
+    flex: 1;
+}
+
+.information-section span {
+    display: block;
+    margin-top: 30px;
+}
+
+form {
+    flex: 4;
+}
+
+.form-header,
+.row,
+.create-button {
+    padding-left: 40px;
+}
+
+.form-header {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.input-section {
+    background-color: white;
+    color: rgb(66, 66, 66);;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 2em;
+}
+
+.row {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 1.6em;
+}
+
+label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+input {
+    padding: 0.4em 5em 0.4em 0.5em;
+    border: 1px solid var(--input-border-color);
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+input:focus:valid {
+    outline-color: rgb(0, 134, 0);
+}
+
+input:focus:invalid {
+    outline-color: red;
+}
+
+.create-button button {
+    background-color: var(--button-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 16px 56px;
+    margin-bottom: 1.5em;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.create-button button:hover {
+    background-color: var(--hover-button-color);
+}
+
+.create-button div {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+a {
+    color: var(--button-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+label, input {
+    display: block;
+}
+
+
+
+
